@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:5000/api';
+const API_URL = 'https://api-webetu.mesrs.dz/api';
 
 export const login = async (credentials) => {
     try {
-        const response = await axios.post('https://api-webetu.mesrs.dz/api/authentication/v1/', credentials);
+        const response = await axios.post(`${API_URL}/authentication/v1/`, credentials);
         return {
             token: response.data.token,
             uuid: response.data.uuid
