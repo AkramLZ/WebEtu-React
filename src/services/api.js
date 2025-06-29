@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://api-webetu.mesrs.dz/api';
+const API_URL = 'https://webetu.proxy.akraml.com/api';
 
 export const login = async (credentials) => {
     try {
