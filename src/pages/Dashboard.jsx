@@ -86,7 +86,7 @@ const Dashboard = () => {
                          className="bg-white rounded-2xl shadow-xl border border-sky-100 p-8 transition-all duration-300">
                         <h2 className="text-2xl font-black text-sky-800 ">
                             <i className={`fa-solid fa-school mr-3`}></i>
-                            Bacelory Information
+                            Baccalaureate Information
                         </h2>
 
                         <div className="space-y-6 pt-6">
