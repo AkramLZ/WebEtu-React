@@ -21,7 +21,6 @@ function App() {
                         <Route path="/group-section" element={<GroupSection />} />
                         <Route path="/assessments" element={<Assessments />} />
                         <Route path="/grades" element={<ExamGrades />} />
-                        <Route path="/transcripts" element={<ExamGrades />} />
                         <Route path="/enrollments" element={<Enrollments />} />
                     </Route>
                     <Route path="*" element={<PageNotFound />} />
