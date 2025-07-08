@@ -50,6 +50,25 @@ export const fetchAcademicYear = async () => {
     }
 }
 
+export const fetchDias = async () => {
+    try {
+        const uuid = localStorage.getItem('uuid');
+        const token = localStorage.getItem('token');
+
+        const response = await axios.get(`${API_URL}/infos/bac/${uuid}/dias`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token
+            }
+        });
+
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        throw new Error('Failed to fetch dias');
+    }
+}
+
 export const fetchDia = async (year) => {
     try {
         const uuid = localStorage.getItem('uuid');

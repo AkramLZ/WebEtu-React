@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import GroupSection from "./pages/GroupSection";
 import Assessments from './pages/Assessments';
 import ExamGrades from './pages/ExamGrades'
+import Enrollments from './pages/Enrollments';
 import PageNotFound from './pages/PageNotFound'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                         <Route path="/assessments" element={<Assessments />} />
                         <Route path="/grades" element={<ExamGrades />} />
                         <Route path="/transcripts" element={<ExamGrades />} />
+                        <Route path="/enrollments" element={<Enrollments />} />
                     </Route>
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
