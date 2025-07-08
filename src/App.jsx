@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import GroupSection from "./pages/GroupSection";
 import Assessments from './pages/Assessments';
 import ExamGrades from './pages/ExamGrades'
+import PageNotFound from './pages/PageNotFound'
 
 function App() {
     return (
@@ -19,8 +20,9 @@ function App() {
                         <Route path="/group-section" element={<GroupSection />} />
                         <Route path="/assessments" element={<Assessments />} />
                         <Route path="/grades" element={<ExamGrades />} />
+                        <Route path="/transcripts" element={<ExamGrades />} />
                     </Route>
-                    <Route path="*" element={<Login />} />
+                    <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </Router>
         </AuthProvider>
