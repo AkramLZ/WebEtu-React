@@ -9,13 +9,18 @@ import Assessments from './pages/Assessments';
 import ExamGrades from './pages/ExamGrades'
 import Enrollments from './pages/Enrollments';
 import PageNotFound from './pages/PageNotFound'
+import PublicRoute from "./components/PublicRoute.jsx";
 
 function App() {
     return (
         <AuthProvider>
             <Router>
                 <Routes>
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={
+                        <PublicRoute>
+                            <Login />
+                        </PublicRoute>
+                    }/>
                     <Route element={<PrivateRoute />}>
                         <Route path="/" element={<Dashboard />} />
                         <Route path="/dashboard" element={<Dashboard />} />
