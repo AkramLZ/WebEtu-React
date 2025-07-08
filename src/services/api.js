@@ -14,10 +14,26 @@ export const login = async (credentials) => {
     }
 };
 
+export const getToken = () => {
+    let token = localStorage.getItem('token');
+    if (!token) {
+        token = sessionStorage.getItem('token');
+    }
+    return token;
+}
+
+export const getUuid = () => {
+    let uuid = localStorage.getItem('uuid');
+    if (!uuid) {
+        uuid = sessionStorage.getItem('uuid');
+    }
+    return uuid;
+}
+
 export const fetchIndividu = async () => {
     try {
-        const uuid = localStorage.getItem('uuid');
-        const token = localStorage.getItem('token');
+        const uuid = getUuid();
+        const token = getToken();
 
         const response = await axios.get(`${API_URL}/infos/bac/${uuid}/individu`, {
             headers: {
@@ -35,7 +51,7 @@ export const fetchIndividu = async () => {
 
 export const fetchAcademicYear = async () => {
     try {
-        const token = localStorage.getItem('token');
+        const token = getToken();
 
         const response = await axios.get(`${API_URL}/infos/AnneeAcademiqueEncours`, {
             headers: {
@@ -52,8 +68,8 @@ export const fetchAcademicYear = async () => {
 
 export const fetchDias = async () => {
     try {
-        const uuid = localStorage.getItem('uuid');
-        const token = localStorage.getItem('token');
+        const uuid = getUuid();
+        const token = getToken();
 
         const response = await axios.get(`${API_URL}/infos/bac/${uuid}/dias`, {
             headers: {
@@ -71,8 +87,8 @@ export const fetchDias = async () => {
 
 export const fetchDia = async (year) => {
     try {
-        const uuid = localStorage.getItem('uuid');
-        const token = localStorage.getItem('token');
+        const uuid = getUuid();
+        const token = getToken();
 
         const response = await axios.get(`${API_URL}/infos/bac/${uuid}/anneeAcademique/${year}/dia`, {
             headers: {
@@ -90,7 +106,7 @@ export const fetchDia = async (year) => {
 
 export const fetchAssessments = async (diaId) => {
     try {
-        const token = localStorage.getItem('token');
+        const token = getToken();
         const response = await axios.get(`${API_URL}/infos/controleContinue/dia/${diaId}/notesCC`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -107,7 +123,7 @@ export const fetchAssessments = async (diaId) => {
 
 export const fetchExamGrades = async (diaId) => {
     try {
-        const token = localStorage.getItem('token');
+        const token = getToken();
         const response = await axios.get(`${API_URL}/infos/planningSession/dia/${diaId}/noteExamens`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -124,7 +140,7 @@ export const fetchExamGrades = async (diaId) => {
 
 export const fetchGroups = async (diaId) => {
     try {
-        const token = localStorage.getItem('token');
+        const token = getToken();
         const response = await axios.get(`${API_URL}/infos/dia/${diaId}/groups`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -141,7 +157,7 @@ export const fetchGroups = async (diaId) => {
 
 export const fetchPeriods = async (niveauId) => {
     try {
-        const token = localStorage.getItem('token');
+        const token = getToken();
         const response = await axios.get(`${API_URL}/infos/niveau/${niveauId}/periodes`, {
             headers: {
                 'Content-Type': 'application/json',

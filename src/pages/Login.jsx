@@ -4,6 +4,7 @@ import {AuthContext} from '../context/AuthContext';
 import {login} from '../services/api';
 
 const Login = () => {
+    const [rememberMe, setRememberMe] = useState(false);
     const [credentials, setCredentials] = useState({username: '', password: ''});
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ const Login = () => {
 
         try {
             const {token, uuid} = await login(credentials);
-            authLogin(token, uuid);
+            authLogin(token, uuid, rememberMe);
             navigate('/dashboard');
         } catch (err) {
             setError(err.message);
@@ -93,7 +94,9 @@ const Login = () => {
                         <div className="flex items-center justify-between mb-6">
                             <div className="flex items-center">
                                 <input id="remember-me" name="remember-me" type="checkbox"
-                                       className="h-4 w-4 text-sky-600 focus:ring-sky-500 border-gray-300 rounded"/>
+                                       className="h-4 w-4 text-sky-600 focus:ring-sky-500 border-gray-300 rounded"
+                                       onChange={(e) => setRememberMe(e.target.checked)}
+                                />
                                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">Remember
                                     me</label>
                             </div>
