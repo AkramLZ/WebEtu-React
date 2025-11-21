@@ -1,12 +1,67 @@
-# React + Vite
+# WebEtu - Algerian Univerisity Students' Portal
+An unofficial, modern, and open-source re-implementation of the Algerian PROGRES Student Portal (WebEtu) built with React and Tailwind CSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
+You can view a live deployment of the project [here](https://webetu.akraml.com/).
 
-Currently, two official plugins are available:
+## Features
+While specific features depend on the backend integration, a modern student portal frontend would typically offer:
+* [x] **Responsive Design**: Optimized for seamless viewing and interaction across desktop, tablet, and mobile devices.
+* [x] **Modern UI/UX**: A clean, intuitive interface powered by Tailwind CSS.
+* [x] **Academic Dashboard**: A personalized overview of the student's current academic status.
+* [x] **Consultation of Results**: Quick access to grades and evaluation scores.
+* [ ] **Time Table View**: Clear display of course schedules.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+This project is built using the following core technologies:
+| Technology   | Description                                                                        |
+|--------------|------------------------------------------------------------------------------------|
+| React        | A JavaScript library for building user interfaces.                                 |
+| Vite         | A fast build tool that significantly improves the frontend development experience. |
+| Tailwind CSS | A utility-first CSS framework for rapid styling.                                   |
+| JavaScript   | The primary programming language used for logic.                                   |
 
-## Expanding the ESLint configuration
+## Installation and Setup
+Follow these steps to get a local copy of the project up and running.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+You need to have Node.js and npm (or yarn/pnpm) installed on your machine.
+
+### Clone the Repository
+```bash
+git clone https://github.com/AkramLZ/WebEtu-React.git
+cd WebEtu-React
+```
+
+### Install Dependencies
+Install the required packages using your preferred package manager:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### Run the Development Server
+Start the development server. The application will typically run on `http://localhost:5173`.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+The compiled files will be located in the `dist` directory.
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project.
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature).
+3. Commit your Changes (git commit -m 'Add some AmazingFeature').
+4. Push to the Branch (git push origin feature/AmazingFeature).
+5. Open a Pull Request.
+
+## License
+Distributed under the **MIT License**. See [LICENSE](https://github.com/AkramLZ/WebEtu-React/blob/master/LICENSE) for more information.
